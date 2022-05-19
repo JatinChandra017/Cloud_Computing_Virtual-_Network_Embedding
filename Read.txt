@@ -1,0 +1,41 @@
+Note: Read and Understand the Virtual network embedding(VNE) problem statement.
+
+
+S1.Download P3_ALIB_MASTER unzip copy to C Drive or Where the project is existing Note: P3_ALIB_MASTER\input contain pickle files. 
+Ex: senario_RedBestel.pickle
+Note: Excluding VtlWavenet2011_KK_ARNER_2.pickle file, all other pickle file conatin Single Substrate Network information but this
+one contain Two Substrate network information one is KK_Aarnet and other one is VtlWavenet2011 network(WE can multiple substrate networks),
+but while uing this we need to establish the connection between two randomely.
+
+S2. In vne.py: 
+a. We can mention reuiremnets of VNRs like minimum and Maximum number of nodes.
+Total number of reuests in create_vne Function.
+
+b. WE can set the virtual network requests demand like BandWidth(1,n) ,CRB(CPU)(1,10), Location(0,100),Delay(1,4) in vne.append function. 
+EX: (1, 10, 1, 10, 0, 100, 0, 100, 1, 4)) )  # for vne request
+
+c. Run Vne.py after doing any modification.
+
+
+S3 In Grpah_extraction.py:
+
+a. In graph.Parameters function we set Physical network resources like BandWidth(1,n) ,CRB(CPU)(1,10), Location(0,100),Delay(1,4).
+Ex: (10000, 500000, 10000, 500000, 0, 100, 0, 100, 1, 1)
+b. In get_graphs function mention the pickle file relates to physical network which available in the folder P3_ALIB_MASTER.
+
+EX:
+ os.path.join(
+            os.path.dirname(current),
+            "P3_ALIB_MASTER",
+            "input",
+            "senario_RedBestel.pickle",)
+
+c. Run Grpah_extraction.py after doing any modification.
+
+S4. a input.pickle file is created and it is having all input parameters for both physical network and Virtual network request parameeters.
+
+
+S5. Graph.py Contain the various parameters used in input picke file.
+
+
+S6. Use above pickle file to solve the VNE problem.
