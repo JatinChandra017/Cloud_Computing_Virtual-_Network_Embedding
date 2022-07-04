@@ -34,4 +34,4 @@ Steps to run:
 
 4. Run each block of code one by one. It will automatically generate the Substrate and Virtual Network.
 
-5. Please make a note. In this code we have used our predefine substrate graph, name as "demo_substrate", which is an 8x8 complete graph or another graph is also availabe to use, name as "substrate" which contains 84 node (which we avoided to use due to complex structure). Analysing small graph is easier, faster and well representable. Output of this file gives Node and Link Mapping for Virtual Node Requests (VNR).
+5. Here a demo graph is used which is much smaller than orignal graph for better understanding and visualization.
